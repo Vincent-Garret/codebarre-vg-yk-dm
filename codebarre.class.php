@@ -26,7 +26,7 @@ class CodeBar{
             return $value;
     }
     }
-    public function parie2(){
+    public function partie2(){
 
     }
 }
