@@ -2,7 +2,7 @@
 
 include_once 'elements.php';
 
-class CoderBar{
+class CodeBar{
     private $ZoneNormale;
     private $ZoneCentrale;
 
