@@ -1,6 +1,7 @@
+
 <?php
 $elements = [
-    'ZoneNormal' => [1,0,1],
+    'ZoneNormale' => [1,0,1],
 
     'ZoneCentrale' => [0,1,0,1,0],
 
@@ -41,4 +42,5 @@ $elements = [
         9 => [1,1,1,0,1,0,0]
     ]
 ];
+
 ?>
