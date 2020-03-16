@@ -65,7 +65,7 @@ private $elements = [
             return $value;
         }
     }
-    public function parie2(){
+    public function partie2(){
         $B = $this->elements['B'];
         foreach ($B as $key => $value) {
             return $value;
