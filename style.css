@@ -1,0 +1,23 @@
+* {
+    font-family: "Raleway";
+}
+
+section {
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#codebarre {
+    width: 200px;
+    height: 25px;
+    margin-bottom: 30px;
+}
+
+#generer {
+    width: 80px;
+    height: 25px;
+}
+
