@@ -1,8 +1,8 @@
 <?php
 $elements = [
-    "ZoneGardeNormal" => [1,0,1],
+    "ZoneNormal" => [1,0,1],
 
-    "ZoneGardeCentrale" => [0,1,0,1,0],
+    "ZoneCentrale" => [0,1,0,1,0],
 
     "A" => [
         0 => [0,0,0,1,1,0,1],
