@@ -21,8 +21,10 @@ class CodeBar{
         return $this->ZoneCentrale;
     }
     public function partie1(){
-        foreach ($elements as $key => $value) {
+        $A = $elements['A'];
+        foreach ($A as $key => $value) {
             return $value;
+    }
     }
     public function parie2(){
 
