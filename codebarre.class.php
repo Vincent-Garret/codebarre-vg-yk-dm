@@ -100,7 +100,7 @@ private $elements = [
 
     }
     public function partie2(){
-        $C = $this->elements['B'];
+        $C = $this->elements['C'];
         //foreach ($C as $key => $value) {}
             //return $value;
         $str = str_split($this->code);
@@ -125,7 +125,7 @@ private $elements = [
         $this->partie1();
         $this->getZoneCentrale();
         $this->partie2();
-        $this->getZoneNormale2();
+        $this->getZoneNormale();
     }
 }
 
