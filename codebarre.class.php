@@ -59,17 +59,20 @@ private $elements = [
     {
         return $this->elements['ZoneCentrale'];
     }
-    public function partie1(){
+    public function partie1()
+    {
         $A = $this->elements['A'];
-        foreach ($A as $key => $value) {
+        foreach ($A as $value) {
             return $value;
         }
+            var_dump($value);
+
     }
     public function partie2(){
-        $B = $this->elements['B'];
-        foreach ($B as $key => $value) {
+        $C = $this->elements['B'];
+        foreach ($C as $key => $value) {}
             return $value;
-        }
+
     }
 }
 
