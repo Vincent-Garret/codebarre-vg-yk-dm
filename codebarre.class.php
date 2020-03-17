@@ -57,17 +57,6 @@ private $elements = [
             }
         }
     }
-
-    public function getZoneNormale2() {
-    foreach ($this->elements['ZoneNormale'] as $bit){
-        if ($bit == 1) {
-
-            echo "<div class='garde'></div>";
-        } else {
-            echo "<div class='blanche'></div>";
-        }
-    }
-}
     /**
      * @return mixed
      */
