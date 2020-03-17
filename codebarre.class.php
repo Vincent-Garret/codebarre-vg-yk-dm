@@ -122,7 +122,8 @@ private $elements = [
                     }
                 }
             }
-        }
+        }else
+            return $message = 'Vous devez taper 8 ou 13 chiffres';
 
     }
     public function partie2(){
@@ -150,7 +151,8 @@ private $elements = [
                     }
                 }
             }
-        }
+        }else
+            return $message = 'Vous devez taper 8 ou 13 chiffres';
 
     }
 
@@ -159,11 +161,15 @@ private $elements = [
     }
 
     public function affiche(){
-        $this->getZoneNormale();
-        $this->partie1();
-        $this->getZoneCentrale();
-        $this->partie2();
-        $this->getZoneNormale();
+        $str = str_split($this->code);
+        if(count($str) == 13 || count($str) == 8 ){
+            $this->getZoneNormale();
+            $this->partie1();
+            $this->getZoneCentrale();
+            $this->partie2();
+            $this->getZoneNormale();
+        }else
+            echo $this->partie2();
     }
 }
 
