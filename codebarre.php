@@ -1,4 +1,7 @@
+<link rel="stylesheet" href="style.css">
+
 <?php
+
     include_once 'codebarre.class.php';
 
 

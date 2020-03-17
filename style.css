@@ -2,6 +2,10 @@
     font-family: "Raleway";
 }
 
+div {
+    float: left;
+    display: inline-block;
+}
 section {
     text-align: center;
 }

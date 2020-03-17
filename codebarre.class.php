@@ -50,15 +50,23 @@ private $elements = [
      */
     public function getZoneNormale() {
         foreach ($this->elements['ZoneNormale'] as $bit){
-            if ($bit == 1) return "<div class='garde'></div>"; else return "<div class='blanche'></div>";
+            if ($bit == '1') {
+                echo "<div class='garde'></div>";
+            } else {
+                echo "<div class='blanche'></div>";
             }
+        }
     }
     /**
      * @return mixed
      */
     public function getZoneCentrale() {
         foreach ($this->elements['ZoneCentrale'] as $bit){
-            if ($bit == 1) return "<div class='garde'></div>"; else return "<div class='blanche'></div>";
+            if ($bit == '1') {
+                echo "<div class='garde'></div>";
+            } else {
+                echo "<div class='blanche'></div>";
+            }
         }
     }
 
@@ -71,7 +79,11 @@ private $elements = [
         $str = str_split($this->code);
         for ($i = 0 ; $i <=3 ; $i++) {
             foreach ($A[$str[$i]] as $bit) {
-                if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
+                if ($bit == '1') {
+                    echo "<div class='noire'></div>";
+                }  else {
+                    echo "<div class='blanche'></div>";
+                }
             }
         }
 
@@ -83,7 +95,11 @@ private $elements = [
         $str = str_split($this->code);
         for ($i = 4 ; $i <=7 ; $i++) {
             foreach ($C[$str[$i]] as $bit) {
-                if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
+                if ($bit == '1') {
+                    echo "<div class='noire'></div>";
+                }  else {
+                    echo "<div class='blanche'></div>";
+                }
             }
         }
 
@@ -94,7 +110,11 @@ private $elements = [
     }
 
     public function affiche(){
-        echo $this->getZoneNormale() . $this->partie1() . $this->getZoneCentrale() . $this->partie2() . $this->getZoneNormale();
+        $this->getZoneNormale();
+        $this->partie1();
+        $this->getZoneCentrale();
+        $this->partie2();
+        $this->getZoneNormale();
     }
 }
 
