@@ -3,8 +3,10 @@
 
 
 
-    $codebar = new CodeBar();
-    $codebar->partie1();
+    $codebar = new CodeBar($_GET['codebarre']);
+    $codebar->affiche();
+
+
     //$codebar->affiche("$codebar->getZoneNormale()" . "$codebar->partie1()" . "$codebar->getZoneCentrale()" . "$codebar->partie2()" . "$codebar->getZoneNormale()");
     // echo '"$codebar->getZoneNormale()" . "$codebar->partie1()" . "$codebar->getZoneCentrale()" . "$codebar->partie2()" . "$codebar->getZoneNormale()"';
 

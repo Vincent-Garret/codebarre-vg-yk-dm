@@ -3,7 +3,7 @@
 include_once 'elements.php';
 
 class CodeBar{
-
+private $code;
 private $elements = [
         'ZoneNormale' => [1,0,1],
         'ZoneCentrale' => [0,1,0,1,0],
@@ -68,7 +68,7 @@ private $elements = [
         //foreach ($A as $value) {
             //var_dump($value);
         //}
-        $str = str_split([$_GET['codebarre']]);
+        $str = str_split($this->code);
         for ($i = 0 ; $i <=3 ; $i++) {
             foreach ($A[$str[$i]] as $bit) {
                 if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
@@ -80,13 +80,17 @@ private $elements = [
         $C = $this->elements['B'];
         //foreach ($C as $key => $value) {}
             //return $value;
-        $str = str_split([$_GET['codebarre']]);
+        $str = str_split($this->code);
         for ($i = 4 ; $i <=7 ; $i++) {
             foreach ($C[$str[$i]] as $bit) {
                 if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
             }
         }
 
+    }
+
+    public function __construct($code) {
+       $this->code = $code;
     }
 
     public function affiche(){
