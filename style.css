@@ -10,7 +10,7 @@ h1 {
     font-size: 40px;
 }
 
-#codebarre {
+#codebarre, #codebarre2 {
     width: 200px;
     height: 25px;
     margin-bottom: 30px;

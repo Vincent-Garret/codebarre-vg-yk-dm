@@ -66,7 +66,7 @@ private $elements = [
             //var_dump($value);
         }
 
-        foreach ($A[2] as $bit) {
+        foreach ($A[] as $bit) {
             if ($bit == 1) echo 'div noire'; else echo 'div blanche';
         }
 
