@@ -71,7 +71,7 @@ private $elements = [
         $str = str_split([$_GET['codebarre']]);
         for ($i = 0 ; $i <=3 ; $i++) {
             foreach ($A[$str[$i]] as $bit) {
-                if ($bit == 1) return "<div class='noir'></div>"; else return "<div class='blanche'></div>";
+                if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
             }
         }
 
