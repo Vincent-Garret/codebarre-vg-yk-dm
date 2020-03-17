@@ -48,9 +48,10 @@ private $elements = [
     /**
      * @return mixed
      */
-    public function getZoneNormale()
-    {
-        return $this->elements['ZoneNormale'];
+    public function getZoneNormale() {
+        foreach ($this->elements['ZoneNormale'] as $bit){
+            if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
+            }
     }
     /**
      * @return mixed
@@ -69,7 +70,7 @@ private $elements = [
         $str = str_split([$_GET['codebarre']]);
         for ($i = 0 ; $i <=3 ; $i++) {
             foreach ($A[$str[$i]] as $bit) {
-                if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
+                if ($bit == 1) return "<div class='garde'></div>"; else return "<div class='blanche'></div>";
             }
         }
 
@@ -81,11 +82,12 @@ private $elements = [
         $str = str_split([$_GET['codebarre']]);
         for ($i = 4 ; $i <=7 ; $i++) {
             foreach ($C[$str[$i]] as $bit) {
-                if ($bit == 1)' return "<div class='noire'></div>"; else return "<div class='blanche'></div>";'
+                if ($bit == 1) return "<div class='noire'></div>"; else return "<div class='blanche'></div>";
             }
         }
 
     }
+
     public function affiche(){
         echo $this->getZoneNormale() . $this->partie1() . $this->getZoneCentrale() . $this->partie2() . $this->getZoneNormale();
     }
