@@ -57,17 +57,6 @@ private $elements = [
             }
         }
     }
-
-    public function getZoneNormale2() {
-    foreach ($this->elements['ZoneNormale'] as $bit){
-        if ($bit == 1) {
-
-            echo "<div class='garde'></div>";
-        } else {
-            echo "<div class='blanche'></div>";
-        }
-    }
-}
     /**
      * @return mixed
      */
@@ -100,7 +89,7 @@ private $elements = [
 
     }
     public function partie2(){
-        $C = $this->elements['B'];
+        $C = $this->elements['C'];
         //foreach ($C as $key => $value) {}
             //return $value;
         $str = str_split($this->code);
@@ -125,7 +114,7 @@ private $elements = [
         $this->partie1();
         $this->getZoneCentrale();
         $this->partie2();
-        $this->getZoneNormale2();
+        $this->getZoneNormale();
     }
 }
 
