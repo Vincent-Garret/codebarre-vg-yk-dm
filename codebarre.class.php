@@ -67,9 +67,10 @@ private $elements = [
             //var_dump($value);
         //}
         $str = str_split([$_GET['codebarre']]);
-
-        foreach ($A[$_GET['codebarre']] as $bit) {
-            if ($bit == 1) echo 'div noire'; else echo 'div blanche';
+        for ($i = 0 ; $i <=3 ; $i++) {
+            foreach ($A[$str[$i]] as $bit) {
+                if ($bit == 1) return 'div noire'; else return 'div blanche';
+            }
         }
 
     }
@@ -77,10 +78,16 @@ private $elements = [
         $C = $this->elements['B'];
         //foreach ($C as $key => $value) {}
             //return $value;
-        foreach ($C[$_GET['codebarre']] as $bit){
-            if ($bit == 1) echo 'div noire'; else echo 'div blanche';
+        $str = str_split([$_GET['codebarre']]);
+        for ($i = 4 ; $i <=7 ; $i++) {
+            foreach ($C[$str[$i]] as $bit) {
+                if ($bit == 1) return 'div noire'; else return 'div blanche';
+            }
         }
 
+    }
+    public function affiche(){
+        echo $this->getZoneNormale() . $this->partie1() . $this->getZoneCentrale() . $this->partie2() . $this->getZoneNormale();
     }
 }
 
