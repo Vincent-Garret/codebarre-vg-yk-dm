@@ -75,7 +75,7 @@ private $elements = [
         $C = $this->elements['B'];
         //foreach ($C as $key => $value) {}
             //return $value;
-        foreach ($C[$_GET['codebarre']] as $bit){
+        foreach ($C[$_GET['codebarre2']] as $bit){
             if ($bit == 1) echo 'div noire'; else echo 'div blanche';
         }
 
