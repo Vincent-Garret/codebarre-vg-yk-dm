@@ -84,16 +84,29 @@ private $elements = [
     public function partie1()
     {
         $A = $this->elements['A'];
+        $B = $this->elements['B'];
         //foreach ($A as $value) {
             //var_dump($value);
         //}
         $str = str_split($this->code);
-        for ($i = 0 ; $i <=3 ; $i++) {
-            foreach ($A[$str[$i]] as $bit) {
-                if ($bit == 1) {
-                    echo "<div class='noire'></div>";
-                }  else {
-                    echo "<div class='blanche'></div>";
+        if(count($str) == 8){
+            for ($i = 0 ; $i <=3 ; $i++) {
+                foreach ($A[$str[$i]] as $bit) {
+                    if ($bit == 1) {
+                        echo "<div class='noire'></div>";
+                    } else {
+                        echo "<div class='blanche'></div>";
+                    }
+                }
+            }
+        } elseif (count($str) == 13){
+            for ($i = 1 ; $i <=5 ; $i++) {
+                foreach ($A[$str[$i]] as $bit) {
+                    if ($bit == 1) {
+                        echo "<div class='noire'></div>";
+                    }else{
+                        echo "<div class='blanche'></div>";
+                    }
                 }
             }
         }
@@ -104,12 +117,24 @@ private $elements = [
         //foreach ($C as $key => $value) {}
             //return $value;
         $str = str_split($this->code);
-        for ($i = 4 ; $i <=7 ; $i++) {
-            foreach ($C[$str[$i]] as $bit) {
-                if ($bit == 1) {
-                    echo "<div class='noire'></div>";
-                }  else {
-                    echo "<div class='blanche'></div>";
+        if(count($str)==8){
+            for ($i = 4 ; $i <=7 ; $i++) {
+                foreach ($C[$str[$i]] as $bit) {
+                    if ($bit == 1) {
+                        echo "<div class='noire'></div>";
+                    }else{
+                        echo "<div class='blanche'></div>";
+                    }
+                }
+            }
+        } elseif (count($str) == 13){
+            for ($i = 6 ; $i <=12 ; $i++) {
+                foreach ($C[$str[$i]] as $bit) {
+                    if ($bit == 1) {
+                        echo "<div class='noire'></div>";
+                    }else{
+                        echo "<div class='blanche'></div>";
+                    }
                 }
             }
         }
