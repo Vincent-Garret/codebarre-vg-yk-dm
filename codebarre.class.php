@@ -62,19 +62,22 @@ private $elements = [
     public function partie1()
     {
         $A = $this->elements['A'];
-        foreach ($A as $value) {
+        //foreach ($A as $value) {
             //var_dump($value);
-        }
+        //}
 
-        foreach ($A[2] as $bit) {
+        foreach ($A[$_GET['codebarre']] as $bit) {
             if ($bit == 1) echo 'div noire'; else echo 'div blanche';
         }
 
     }
     public function partie2(){
         $C = $this->elements['B'];
-        foreach ($C as $key => $value) {}
-            return $value;
+        //foreach ($C as $key => $value) {}
+            //return $value;
+        foreach ($C[$_GET['codebarre']] as $bit){
+            if ($bit == 1) echo 'div noire'; else echo 'div blanche';
+        }
 
     }
 }
