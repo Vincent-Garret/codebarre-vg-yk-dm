@@ -101,12 +101,24 @@ private $elements = [
                 }
             }
         } elseif (count($str) == 13){
+            $matrice = $this->premierChiffre;
             for ($i = 1 ; $i <=6 ; $i++) {
-                foreach ($A[$str[$i]] as $bit) {
-                    if ($bit == 1) {
-                        echo "<div class='noire'></div>";
-                    }else{
-                        echo "<div class='blanche'></div>";
+                if($matrice[$i - 1]=='A') {
+                    foreach ($A[$str[$i]] as $bit) {
+                        if ($bit == 1) {
+                            echo "<div class='noire'></div>";
+                        } else {
+                            echo "<div class='blanche'></div>";
+                        }
+                    }
+                }
+                if ($matrice[$i - 1]=='B') {
+                    foreach ($B[$str[$i]] as $bit) {
+                        if ($bit == 1) {
+                            echo "<div class='noire'></div>";
+                        } else {
+                            echo "<div class='blanche'></div>";
+                        }
                     }
                 }
             }
