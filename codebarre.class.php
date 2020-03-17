@@ -63,9 +63,12 @@ private $elements = [
     {
         $A = $this->elements['A'];
         foreach ($A as $value) {
-            return $value;
+            //var_dump($value);
         }
-            var_dump($value);
+
+        foreach ($A[2] as $bit) {
+            if ($bit == 1) echo 'div noire'; else echo 'div blanche';
+        }
 
     }
     public function partie2(){
