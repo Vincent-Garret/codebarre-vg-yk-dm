@@ -12,7 +12,7 @@
 <h1>GENEREZ VOTRE CODE-BARRE</h1>
 
 <form action="codebarre.php" method="GET">
-    <div>
+    <div class="formulaire">
         <label id="codebarre" for="codebarre"></label>
         <input id="codebarre" name="codebarre" type="number" placeholder="Entrez 8 ou 13 chiffres"/>
     </div>
