@@ -59,12 +59,14 @@ private $elements = [
     {
         return $this->elements['ZoneCentrale'];
     }
+
     public function partie1()
     {
         $A = $this->elements['A'];
         //foreach ($A as $value) {
             //var_dump($value);
         //}
+        $str = str_split([$_GET['codebarre']]);
 
         foreach ($A[$_GET['codebarre']] as $bit) {
             if ($bit == 1) echo 'div noire'; else echo 'div blanche';
@@ -75,7 +77,7 @@ private $elements = [
         $C = $this->elements['B'];
         //foreach ($C as $key => $value) {}
             //return $value;
-        foreach ($C[$_GET['codebarre2']] as $bit){
+        foreach ($C[$_GET['codebarre']] as $bit){
             if ($bit == 1) echo 'div noire'; else echo 'div blanche';
         }
 
