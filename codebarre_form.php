@@ -14,7 +14,7 @@
 <form action="codebarre.php" method="GET">
     <div>
         <label id="codebarre" for="codebarre"></label>
-        <input id="codebarre" name="codebarre" type="number" placeholder="Entrez les 8 chiffres"/>
+        <input id="codebarre" name="codebarre" type="number" />
     </div>
     <div>
         <input id="generer" name="generer" type="submit" value="Générer"/>

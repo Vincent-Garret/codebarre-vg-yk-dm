@@ -4,6 +4,18 @@ include_once 'elements.php';
 
 class CodeBar{
 private $code;
+private $premierChiffre = [
+    0=>['A','A','A','A','A','A'],
+    1=>['A','A','B','A','B','B'],
+    2=>['A','A','B','B','A','B'],
+    3=>['A','A','B','B','B','A'],
+    4=>['A','B','A','A','B','B'],
+    5=>['A','B','B','A','A','B'],
+    6=>['A','B','B','B','A','A'],
+    7=>['A','B','A','B','A','B'],
+    8=>['A','B','A','B','B','A'],
+    9=>['A','B','B','A','B','A'],
+];
 private $elements = [
         'ZoneNormale' => [1,0,1],
         'ZoneCentrale' => [0,1,0,1,0],
@@ -89,7 +101,7 @@ private $elements = [
                 }
             }
         } elseif (count($str) == 13){
-            for ($i = 1 ; $i <=5 ; $i++) {
+            for ($i = 1 ; $i <=6 ; $i++) {
                 foreach ($A[$str[$i]] as $bit) {
                     if ($bit == 1) {
                         echo "<div class='noire'></div>";
@@ -117,7 +129,7 @@ private $elements = [
                 }
             }
         } elseif (count($str) == 13){
-            for ($i = 6 ; $i <=12 ; $i++) {
+            for ($i = 7 ; $i <=12 ; $i++) {
                 foreach ($C[$str[$i]] as $bit) {
                     if ($bit == 1) {
                         echo "<div class='noire'></div>";
