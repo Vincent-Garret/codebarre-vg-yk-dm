@@ -1,5 +1,6 @@
 * {
     font-family: "Raleway";
+    text-align: center;
 }
 
 div {
@@ -14,6 +15,10 @@ h1 {
     font-size: 40px;
 }
 
+.formulaire {
+    display: flex;
+    align-items: center;
+}
 #codebarre, #codebarre2 {
     width: 200px;
     height: 25px;
