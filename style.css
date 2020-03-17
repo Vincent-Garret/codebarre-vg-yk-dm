@@ -21,3 +21,21 @@ h1 {
     height: 25px;
 }
 
+.noire{
+    width: 2px;
+    height: 35px;
+    background-color: black;
+}
+
+.blanche{
+    width: 2px;
+    height: 35px;
+    background-color: white;
+}
+
+.garde {
+    width: 2px;
+    height: 40px;
+
+}
+
