@@ -101,7 +101,7 @@ private $elements = [
                 }
             }
         } elseif (count($str) == 13){
-            $matrice = $this->premierChiffre;
+            $matrice = $this->premierChiffre[substr($this->code, 0, 1)];
             for ($i = 1 ; $i <=6 ; $i++) {
                 if($matrice[$i - 1]=='A') {
                     foreach ($A[$str[$i]] as $bit) {
